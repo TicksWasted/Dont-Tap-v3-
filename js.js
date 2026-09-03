@@ -38,18 +38,18 @@ var sc=0,B5;
 
 // ========== Settings + Hitsounds + Custom Cursor ==========
 var SETTINGS = {
-  volume: 0.7,
+  volume: 0.5,
   cursorSize: 32,
   cursorColor: '#ffffff',
-  hitSound: 'pop',   // 'pop' | 'click' | 'none'
-  jingleEnabled: true, // play a jingle when the multiplier increases
-  jingleVolume: 0.7,
+  hitSound: 'none',
+  jingleEnabled: false,
+  jingleVolume: 0.5,
   showMeter: true,
-  meterMode: 'segment', // 'segment' = per multiplier band | 'overall' = progress to 5x
+  meterMode: 'overall', // 'segment' = per multiplier band | 'overall' = progress to 5x
   useSystemCursor: false,
   showCps: true,
   startOnAnyKey: true,
-  countdownSec: 1,
+  countdownSec: 0,
   boardBg: '#ffffff',
   tileColor: '#000000',
   missColor: '#AF1800',
@@ -66,7 +66,7 @@ try {
   if (saved) SETTINGS = Object.assign(SETTINGS, JSON.parse(saved));
   if (SETTINGS.hitSound === 'click5') SETTINGS.hitSound = 'click';
   if (SETTINGS.hitSound === 'pop5') SETTINGS.hitSound = 'pop';
-  if (typeof SETTINGS.countdownSec !== 'number' || isNaN(SETTINGS.countdownSec)) SETTINGS.countdownSec = 1;
+  if (typeof SETTINGS.countdownSec !== 'number' || isNaN(SETTINGS.countdownSec)) SETTINGS.countdownSec = 0;
   SETTINGS.countdownSec = Math.max(0, Math.min(3, SETTINGS.countdownSec));
   if (typeof SETTINGS.jingleVolume !== 'number' || isNaN(SETTINGS.jingleVolume)) SETTINGS.jingleVolume = SETTINGS.volume;
   SETTINGS.jingleVolume = Math.max(0, Math.min(1, SETTINGS.jingleVolume));
@@ -176,7 +176,7 @@ function playMultJingle(force) {
   if (!SETTINGS.jingleEnabled && !force) return;
   if (jinglePlaying && !force) return; // one shot — don't restart mid-jingle
   try {
-    var vol = (typeof SETTINGS.jingleVolume === 'number') ? SETTINGS.jingleVolume : 0.7;
+    var vol = (typeof SETTINGS.jingleVolume === 'number') ? SETTINGS.jingleVolume : 0.5;
     jingleAudio.volume = vol;
     jingleAudio.currentTime = 0;
     jinglePlaying = true;
