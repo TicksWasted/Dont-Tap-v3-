@@ -1,0 +1,47 @@
+{
+  "name": "donttap-v2",
+  "version": "2.0.0",
+  "description": "Donttap v2 - desktop version",
+  "main": "main.js",
+  "author": "Berserk",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.donttap.v2",
+    "productName": "Donttap v2",
+    "files": [
+      "index.html",
+      "css.css",
+      "js.js",
+      "main.js",
+      "cursor.png",
+      "favicon.ico",
+      "click5.wav",
+      "pop5.wav",
+      "saya_cute.wav",
+      "blop_2.wav",
+      "drum.wav",
+      "minecraft_xp-gain.wav",
+      "minecraft_hit-old.wav",
+      "bell6.wav",
+      "anime.wav"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "favicon.ico"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

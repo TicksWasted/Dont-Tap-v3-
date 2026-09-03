@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta Stencil');
+
+#slider {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;   
+  background: #fff;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+   -moz-transition: .2s;
+   -o-transition: .2s;
+  transition: opacity .2s;
+  margin-top:5px;  
+  cursor: pointer !important;  
+
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: #f460ff;
+  cursor: pointer !important;
+}
+
+#slider::-moz-range-thumb {
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f460ff;
+  cursor: pointer !important;
+}
+
+body { margin: 0;
+ cursor: crosshair;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none;
+font-family: 'Allerta Stencil';
+}
+
+/* Settings / Colors panels */
+#settingsPanel input[type=range],
+#colorsPanel input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #333;
+  outline: none;
+  margin: 8px 0 4px 0;
+}
+#settingsPanel input[type=range]::-webkit-slider-thumb,
+#colorsPanel input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f460ff;
+  cursor: pointer;
+}
+
+#settingsPanel .setRow,
+#colorsPanel .setRow {
+  margin-bottom: 14px;
+}
+#settingsPanel .setRow > label,
+#colorsPanel .setRow > label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+#settingsPanel .hint {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+}
+#settingsPanel .soundGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 8px 0 10px 0;
+}
+#settingsPanel .soundChip {
+  padding: 10px 6px;
+  background: #1c1c1c;
+  color: #ddd;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+#settingsPanel .soundChip:hover {
+  border-color: #f460ff;
+  color: #fff;
+}
+#settingsPanel .soundChip.selected {
+  background: #3a1840;
+  border-color: #f460ff;
+  color: #fff;
+  box-shadow: 0 0 0 1px #f460ff inset;
+}
+#settingsPanel .checkGrid {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 14px 0;
+}
+#settingsPanel .chk,
+#colorsPanel .chk {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+#settingsPanel .meterModes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+#settingsPanel .btnRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+#settingsPanel .panelBtn,
+#colorsPanel .panelBtn {
+  padding: 10px 8px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: #333;
+  color: #fff;
+  font-family: 'Allerta Stencil', sans-serif;
+  cursor: pointer;
+}
+#settingsPanel .panelBtn.good,
+#colorsPanel .panelBtn.good {
+  background: #4CAF50;
+  border-color: #4CAF50;
+}
+#settingsPanel .panelBtn.danger {
+  background: #8b1a1a;
+  border-color: #c44;
+}
+#previewSound {
+  width: 100%;
+}
+#countdownOverlay {
+  letter-spacing: 2px;
+}
+    
+
+#PressKey {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Allerta Stencil';
+}
+
+#switch {
+    background-color: #4CAF50;
+    Width: 200px;
+    outline:none;
+    font-family: 'Allerta Stencil';
+    font-size: 15px;
+    padding: 5px;
+    margin-top:5px;
+    margin-left:2px;
+    border: 2px solid #fff;
+    background: linear-gradient(to left,
+      #000 0% 25%, #fff 25% 75%, #000 75% 100%); 
+transition: all 1s;
+
+}
+
+#switch:hover {
+    color: white;
+    Width: 200px;
+    outline:none;
+    border: 2px solid #999;
+    background: linear-gradient(to left,
+      #fff 0% 25%, #000 25% 75%, #fff 75% 100%); 
+   transition: all 1s;
+    
+}
+
+#switch:active {
+    color: #000;
+    Width: 200px;
+    outline:none;
+    border: 2px solid #8c8c8c;
+    background: linear-gradient(to left,
+      #fff 0% 25%, #fff 25% 75%, #fff 75% 100%); 
+    transition: all 1s;
+}
+
+#zom{font-family: 'Allerta Stencil';
+    font-size: 15px;
+}
+
+#best{font-family: 'Allerta Stencil';}
+
+#records {
+    background-color: #4CAF50;
+    Width: 200px;
+    outline:none;
+    font-family: 'Allerta Stencil';
+    font-size: 15px;
+    padding: 5px;
+    margin-top:45px;
+    margin-left:2px;
+    border: 2px solid #fff;
+    background: linear-gradient(to left,
+      #000 0% 25%, #fff 25% 75%, #000 75% 100%); 
+transition: all 1s;
+
+}
+
+#records:hover {
+    color: white;
+    Width: 200px;
+    outline:none;
+    border: 2px solid #999;
+    background: linear-gradient(to left,
+      #fff 0% 25%, #000 25% 75%, #fff 75% 100%); 
+   transition: all 1s;
+    
+}
+
+#records:active {
+    color: #000;
+    Width: 200px;
+    outline:none;
+    border: 2px solid #8c8c8c;
+    background: linear-gradient(to left,
+      #fff 0% 25%, #fff 25% 75%, #fff 75% 100%); 
+    transition: all 1s;
+}
+
+#patr{
+   color: #171daf; 
+    text-decoration: none;
+    font-size:15px;
+}
+
+#patrLink:hover{
+    color: #0092ff;
+}
+
+#patr:hover{
+    color: #0092ff;
+}
